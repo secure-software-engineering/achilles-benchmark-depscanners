@@ -1,0 +1,2 @@
+#Allow JARs in the case study folder
+!*.jar
