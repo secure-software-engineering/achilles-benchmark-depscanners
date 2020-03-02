@@ -1,0 +1,53 @@
+{
+    "details": [
+        {
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/1597343/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class",
+            "contained": false,
+            "diff": null,
+            "commit": "1597343",
+            "qname": "org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector",
+            "affectedFile": "/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class"
+        },
+        {
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/1597344/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class",
+            "contained": false,
+            "diff": null,
+            "commit": "1597344",
+            "qname": "org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector",
+            "affectedFile": "/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class"
+        },
+        {
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/1597343/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class",
+            "contained": false,
+            "diff": null,
+            "commit": "1597343",
+            "qname": "org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector(Collection)",
+            "affectedFile": "/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class"
+        },
+        {
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/1597343/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class",
+            "contained": false,
+            "diff": null,
+            "commit": "1597343",
+            "qname": "org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector.getSuppressedProperties()",
+            "affectedFile": "/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class"
+        },
+        {
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/1597343/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class",
+            "contained": false,
+            "diff": null,
+            "commit": "1597343",
+            "qname": "org.apache.commons.beanutils.SuppressPropertiesBeanIntrospector.introspect(IntrospectionContext)",
+            "affectedFile": "/org/apache/commons/beanutils/SuppressPropertiesBeanIntrospector.class"
+        }
+    ],
+    "vulnerable": false,
+    "gav": {
+        "artifactId": "commons-beanutils",
+        "groupId": "commons-beanutils",
+        "version": "1.8.0"
+    },
+    "cve": "BEANUTILS-463",
+    "timestamp": "2018-11-30",
+    "comment": "https://issues.apache.org/jira/browse/BEANUTILS-463"
+}

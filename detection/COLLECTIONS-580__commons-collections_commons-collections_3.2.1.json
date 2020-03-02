@@ -1,0 +1,12 @@
+{
+    "timestamp": "2018-11-30",
+    "gav": {
+        "artifactId": "commons-collections",
+        "groupId": "commons-collections",
+        "version": "3.2.1"
+    },
+    "vulnerable": true,
+    "cve": "COLLECTIONS-580",
+    "comment": "https://issues.apache.org/jira/browse/COLLECTIONS-580",
+    "details": []
+}

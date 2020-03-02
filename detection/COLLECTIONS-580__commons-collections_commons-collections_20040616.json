@@ -1,0 +1,12 @@
+{
+    "gav": {
+        "groupId": "commons-collections",
+        "version": "20040616",
+        "artifactId": "commons-collections"
+    },
+    "vulnerable": true,
+    "details": [],
+    "comment": "",
+    "cve": "COLLECTIONS-580",
+    "timestamp": "2018-11-30"
+}

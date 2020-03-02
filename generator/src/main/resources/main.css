@@ -1,0 +1,348 @@
+* {
+    -colour-unseen: #F5F9FF;
+    -colour-known: #EBFFF0;
+    -colour-known-end: #008000;
+    -gradient-known: linear-gradient(from 0% 0% to 100% 200%, repeat, -colour-known 0%, -colour-known-end 90%);
+    -colour-unknown: #FFF0ED;
+    -colour-unknown-end: #a43030;
+    -gradient-unknown: linear-gradient(from 0% 0% to 100% 200%, repeat, -colour-unknown 0%, -colour-unknown-end 90%);
+    -colour-word-use: darkblue;
+    -colour-filtered: lightgrey;
+    -colour-done: royalblue;
+    -colour-remaining: lightcoral;
+    -colour-unseen-unfiltered: powderblue;
+    -colour-about-link: #0095C9;
+    -colour-search-fail: lightcoral;
+}
+
+.mainWord {
+    -fx-font-size: 40;
+}
+
+.mainWordPane { /* This corresponds to the pseudo-class "unseen" */
+    -fx-background-color: -colour-unseen;
+}
+
+.mainWordPane:known {
+    -fx-background-color: -colour-known;
+}
+
+.mainWordPane:unknown {
+    -fx-background-color: -colour-unknown;
+}
+
+.wordList .list-cell:selected {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-border-color: black;
+}
+
+.wordList .list-cell {
+    -fx-border-color: white;
+    -fx-border-width: 1 0 1 0;
+}
+
+.wordList .list-cell:unseen {
+    -fx-background-color: -colour-unseen;
+}
+
+
+.wordList .list-cell:known {
+    -fx-background-color: -gradient-known;
+}
+
+.wordList .list-cell:unknown {
+    -fx-background-color: -gradient-unknown;
+}
+
+.buttonSaveIcon {
+    -glyph-name: SAVE;
+}
+
+.buttonOpenIcon {
+    -glyph-name: FOLDER_OPEN_ALT;
+}
+
+.buttonNewIcon {
+    -glyph-name: FILE_ALT;
+}
+
+.buttonExportIcon {
+    -glyph-name: SHARE_SQUARE_ALT;
+}
+
+.buttonSetupFiltersIcon {
+    -glyph-name: FILTER;
+}
+
+.buttonSaveIcon, .buttonOpenIcon, .buttonNewIcon, .buttonExportIcon, .buttonSetupFiltersIcon {
+    -glyph-size: 24;
+}
+
+.buttonKnown {
+    -fx-base: -colour-known;
+}
+
+.buttonKnownIcon {
+    -glyph-name: CHECK_CIRCLE;
+    -fx-fill: -colour-known-end;
+}
+
+.buttonUnknown {
+    -fx-base: -colour-unknown;
+}
+
+.buttonUnknownIcon {
+    -glyph-name: TIMES_CIRCLE;
+    -fx-fill: -colour-unknown-end;
+}
+
+.buttonKnownIcon, .buttonUnknownIcon {
+    -glyph-size: 30;
+}
+
+.buttonUnseenIcon {
+    -glyph-size: 40;
+    -glyph-name: REFRESH;
+}
+
+.buttonUnseen, .buttonSearchClose, .buttonSearchUp, .buttonSearchDown {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.table-cell:editable {
+    -fx-opacity: 1;
+}
+
+.table-cell:noneditable {
+    -fx-opacity: 0.5;
+    -fx-background-color: lightgrey;
+}
+
+
+.table-row-cell:roweditable
+{
+    -fx-opacity: 0.5;
+    -fx-background-color: lightgrey;
+}
+
+.tableColumnGrey {
+    -fx-opacity: 0.5;
+}
+
+.buttonSearchCloseIcon {
+    -glyph-size: 15;
+    -glyph-name: CLOSE;
+}
+
+.buttonSearchUpIcon, .buttonSearchDownIcon {
+    -glyph-size: 15;
+}
+
+.buttonSearchUpIcon {
+    -glyph-name: CHEVRON_UP;
+}
+
+.buttonSearchDownIcon {
+    -glyph-name: CHEVRON_DOWN;
+}
+
+.searchBoxLabel {
+    -fx-padding: 0 2 0 7;
+}
+
+.searchBoxLabelIcon {
+    -glyph-size: 13;
+    -glyph-name: SEARCH;
+}
+
+.searchField:fail {
+    -fx-background-color: -colour-search-fail;
+}
+
+.noSession {
+    -fx-font-size: 16;
+}
+
+.title {
+    -fx-font-size: 90;
+    -fx-font-family: sans-serif;
+    -fx-font-style: italic;
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
+}
+
+.title.left {
+    -fx-fill: -gradient-known;
+}
+
+.title.right {
+    -fx-fill: -gradient-unknown;
+}
+
+.settings {
+    -fx-padding: 20 20 20 20;
+}
+
+.settings .description {
+    -fx-font-size: 18;
+    -fx-padding: 0 0 10 0;
+}
+
+.settings .fieldLabel {
+    -fx-padding: 10 5 10 5;
+}
+
+.settings .buttonBar {
+    -fx-padding: 20 0 0 0;
+}
+
+.settings .settingsGroup {
+    -fx-border-color: lightgrey;
+    -fx-border-width: 1;
+    -fx-padding: 10 10 10 10;
+    -fx-border-insets: 5 0 5 0;
+}
+
+.about BorderPane {
+    -fx-padding: 10 20 10 10;
+    -fx-border-insets: 10 10 10 10;
+    -fx-border-color: lightgrey;
+    -fx-border-style: dashed;
+}
+
+.about Label, .about Hyperlink {
+    -fx-font-size: 20;
+    -fx-padding: 7 0 7 0;
+}
+
+.websiteIcon {
+    -glyph-name: HOME;
+}
+
+.twitterIcon {
+    -glyph-name: TWITTER;
+}
+
+.websiteIcon, .twitterIcon {
+    -fx-fill: -colour-about-link;
+    -glyph-size: 30;
+}
+
+.noSession .new {
+    -fx-padding: 10 0 10 5;
+}
+
+.noSession .open {
+    -fx-padding: 10 0 0 5;
+}
+
+.wordUse {
+    -fx-font-weight: bold;
+    -fx-fill: -colour-word-use;
+}
+
+/* Done */
+.chartProgress .default-color0.chart-pie {
+    -fx-pie-color: -colour-done;
+}
+
+/* Remaining */
+.chartProgress .default-color1.chart-pie {
+    -fx-pie-color: -colour-remaining;
+}
+
+/* Known */
+.chartResults .default-color0.chart-pie {
+    -fx-pie-color: -colour-known-end;
+}
+
+/* Unknown */
+.chartResults .default-color1.chart-pie {
+    -fx-pie-color: -colour-unknown-end;
+}
+
+/* Unseen & unfiltered */
+.chartResults .default-color2.chart-pie {
+    -fx-pie-color: -colour-unseen-unfiltered;
+}
+
+/* Unseen & filtered */
+.chartResults .default-color3.chart-pie {
+    -fx-pie-color: -colour-filtered;
+}
+
+.chartLegend {
+    -fx-padding: 10;
+    -fx-border-color: lightgrey;
+    -fx-border-width: 1;
+    -fx-border-insets: 0 0 10 0;
+}
+
+.chartLegend Label {
+    -fx-padding: 5 0 5 5;
+}
+
+.chartLegend .keyDone {
+    -fx-fill: -colour-done;
+}
+
+.chartLegend .keyRemaining {
+    -fx-fill: -colour-remaining;
+}
+
+.chartLegend .keyKnown {
+    -fx-fill: -colour-known-end;
+}
+
+.chartLegend .keyUnknown {
+    -fx-fill: -colour-unknown-end;
+}
+
+.chartLegend .keyUnseenUnfiltered {
+    -fx-fill: -colour-unseen-unfiltered;
+}
+
+.chartLegend .keyFiltered {
+    -fx-fill: -colour-filtered;
+}
+
+.masker {
+    -fx-background-color: black;
+    -fx-opacity: 0.3;
+}
+
+.miniGraph {
+    -fx-control-inner-background: -colour-remaining;
+    -fx-accent: -colour-done;
+}
+
+.miniGraph .bar {
+    -fx-background-insets: 0;
+}
+
+.miniGraph .track {
+    -fx-background-insets: 0;
+}
+
+#tableView .table-column {
+    -fx-alignment: CENTER-LEFT;
+}
+
+#tableView .column-header .label {
+    -fx-alignment: CENTER-LEFT;
+}
+
+
+/*#detailTableView .table-column {*/
+/*    -fx-alignment: CENTER-LEFT;*/
+/*}*/
+
+#detailTableView .column-header .label {
+    -fx-alignment: CENTER-LEFT;
+}
+
+.table-row-cell {
+    -fx-cell-size: 26px;
+}
