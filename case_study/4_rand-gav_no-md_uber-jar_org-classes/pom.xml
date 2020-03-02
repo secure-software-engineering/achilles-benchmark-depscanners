@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<modelVersion>4.0.0</modelVersion>
+<groupId>class-Random.gav-Original.metadata-false.uberjar-true.eloquent</groupId>
+<artifactId>snuffles</artifactId>
+<version>19578738530</version>
+<packaging>war</packaging>
+
+<dependencies>
+<dependency>
+<groupId>bold</groupId>
+<artifactId>dave.mcfly</artifactId>
+<version>18865497620</version>
+</dependency>
+</dependencies>
+</project>

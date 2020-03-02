@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<modelVersion>4.0.0</modelVersion>
+<groupId>class-Random.gav-Original.metadata-true.uberjar-true.infallible</groupId>
+<artifactId>krusty.the.clown</artifactId>
+<version>16682491900</version>
+<packaging>war</packaging>
+
+<dependencies>
+<dependency>
+<groupId>angry</groupId>
+<artifactId>bender</artifactId>
+<version>12077541070</version>
+</dependency>
+</dependencies>
+</project>
