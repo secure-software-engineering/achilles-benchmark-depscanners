@@ -1,0 +1,12 @@
+{
+    "comment": "{\"artifacts\": [\"spring-web\", \"spring-core\"], \"references\": [\"https://github.com/spring-projects/spring-framework/commit/f4a2282d9d9f6e58029022c58311a1db07f7defc\"]}",
+    "details": [],
+    "cve": "SPR-7779",
+    "vulnerable": true,
+    "timestamp": "2018-11-30",
+    "gav": {
+        "version": "3.0.0.RC3",
+        "groupId": "org.springframework",
+        "artifactId": "spring-core"
+    }
+}

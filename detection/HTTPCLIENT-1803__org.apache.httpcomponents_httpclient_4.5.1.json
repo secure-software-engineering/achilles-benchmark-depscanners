@@ -1,0 +1,29 @@
+{
+    "gav": {
+        "groupId": "org.apache.httpcomponents",
+        "artifactId": "httpclient",
+        "version": "4.5.1"
+    },
+    "cve": "HTTPCLIENT-1803",
+    "vulnerable": true,
+    "comment": "",
+    "details": [
+        {
+            "commit": "0554271750599756d4946c0d7ba43d04b1a7b22",
+            "diff": "",
+            "qname": "org.apache.http.client.utils.URIBuilder",
+            "affectedFile": "/org/apache/http/client/utils/URIBuilder.class",
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/0554271750599756d4946c0d7ba43d04b1a7b22/org/apache/http/client/utils/URIBuilder.class",
+            "contained": true
+        },
+        {
+            "commit": "0554271750599756d4946c0d7ba43d04b1a7b22",
+            "diff": "",
+            "qname": "org.apache.http.client.utils.URIBuilder.normalizePath(String)",
+            "affectedFile": "/org/apache/http/client/utils/URIBuilder.class",
+            "ref_file": "/media/adann/9117b29d-a7c2-4f28-8956-e1540fc0a715/test_compare_script/0554271750599756d4946c0d7ba43d04b1a7b22/org/apache/http/client/utils/URIBuilder.class",
+            "contained": true
+        }
+    ],
+    "timestamp": "2018-11-30"
+}
