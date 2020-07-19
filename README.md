@@ -1,4 +1,4 @@
-# Achilles - Benchmark for assessing OSS-Vulnerability Scanners 59
+# Achilles - Benchmark for assessing OSS-Vulnerability Scanners
 
 Achilles is an open test suite for evaluating the performance of open-source vulnerability scanners specifically for *Java* and *Maven* applications. 
 
