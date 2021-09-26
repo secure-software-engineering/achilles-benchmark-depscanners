@@ -35,6 +35,8 @@ Each test fixtures specifies in the element `vulnerable` if the warnings is a tr
 ![Generator - Test Cases](achilles_overview_testcases.png)
 
 
+<img src="achilles_overview_testcases.png" width=50%>
+
 
 
 
