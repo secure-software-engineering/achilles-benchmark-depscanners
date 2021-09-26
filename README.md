@@ -32,10 +32,10 @@ The generator creates, based on the test fixtures, Maven/Java projects that can 
 Each test fixtures specifies in the element `vulnerable` if the warnings is a true or false positive.
 
 
-![Generator - Test Cases](achilles_overview_testcases.png)
 
-
-<img src="achilles_overview_testcases.png" width=50%>
+<p align="center">
+  <img width="75%" src="achilles_overview_testcases.png">
+</p>
 
 
 
