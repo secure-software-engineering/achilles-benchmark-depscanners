@@ -3,7 +3,7 @@
 Achilles is an open test suite for evaluating the performance of open-source vulnerability scanners specifically for *Java* and *Maven* applications. 
 
 
-Achilles was created by Andreas Dann (1), Henrik Plate (2), Ben Hermann (3), Serena Elisa (2) Ponta,  and Eric Bodden (1) of the (1) security research group at Paderborn University, (2) SAP Security Research Mougins, France, and (3) Secure Software Engineering at Technical University Dortmund.
+Achilles was created by Andreas Dann (1), Henrik Plate (2), Ben Hermann (3), Serena Elisa (2) Ponta,  and Eric Bodden (1) of the security research group at Paderborn University (1),  SAP Security Research Mougins, France (2), and the secure software engineering group at Technical University Dortmund (3).
 
 ## Achilles is the right benchmark for you, if you are
 * Using open-source libraries and frameworks,
