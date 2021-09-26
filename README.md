@@ -38,6 +38,12 @@ Each test fixtures specifies in the element `vulnerable` if the warnings is a tr
 </p>
 
 
+## Publications 
+
+If you want to read the details on how Achilles works, and the basis on which the test suite was created, our IEEE TSE paper [Identifying Challenges for OSS Vulnerability Scanners - A Study & Test Suite
+](https://ieeexplore.ieee.org/document/9506931) is a good place to start.
+
+
 
 
 ## We welcome your contributions!
