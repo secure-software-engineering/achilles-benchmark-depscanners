@@ -5,6 +5,10 @@ Achilles is an open test suite for evaluating the performance of open-source vul
 
 Achilles was created by Andreas Dann (1), Henrik Plate (2), Ben Hermann (3), Serena Elisa (2) Ponta,  and Eric Bodden (1) of the security research group at Paderborn University (1),  SAP Security Research Mougins, France (2), and the secure software engineering group at Technical University Dortmund (3).
 
+
+
+
+
 ## Achilles is the right benchmark for you, if you are
 * Using open-source libraries and frameworks,
 * Using the build-automation system *Maven* to manage project dependencies,
@@ -28,7 +32,7 @@ The test fixtures contain true and false positive warnings raised by the tools [
 
 
 #### Stats
-The test cases contain *251* distinct CVEs, and *534* distinct 
+The test cases cover *251* distinct CVEs, and *534* distinct 
 
 An overview of the included artifacts is given in the table below
 
@@ -135,7 +139,7 @@ To do so, please fork the project, commit an appropriate test fixture, update th
 Achilles is licensed under the LGPLv3 license, see LICENSE file. This basically means that you are free to use the tool (even in commercial, closed-source projects). However, if you extend or modify the tool, you must make your changes available under the LGPLv3 as well. This ensures that we can continue to improve the tool as a community effort.
 
 
-### Contact
+## Contact
 
 If you experience any issues, you can ask for help on GitHub issue board. You can also contact us at andreas.dann@uni-paderborn.de
 
