@@ -18,7 +18,7 @@ Achilles was created by Andreas Dann (1), Henrik Plate (2), Ben Hermann (3), Ser
 
 
 
-### Detection
+### Test Cases
 
 The folder `detection` contains 2505 test fixtures to measure the performance of open-source vulnerability scanner for detecting the inclusion of known vulnerable dependencies.
 The test fixtures are in the form of json files following the naming scheme: `<CVE>_<GAV>.json.`.
@@ -27,7 +27,86 @@ The test fixtures contain true and false positive warnings raised by the tools [
 
 
 
-### Generator
+#### Stats
+The test cases contain *251* distinct CVEs, and *534* distinct 
+
+An overview of the included artifacts is given in the table below
+
+|  GroupId:ArtifactId                                            | #Num|
+|:---------------------------------------------------------------|----:|
+| ('axis', 'axis')                                               |   3 |
+| ('bouncycastle', 'bcprov-jdk14')                               |  13 |
+| ('com.fasterxml.jackson.core', 'jackson-databind')             | 606 |
+| ('com.fasterxml.jackson.dataformat', 'jackson-dataformat-xml') |  77 |
+| ('com.google.guava', 'guava')                                  |  25 |
+| ('com.google.guava', 'guava-bootstrap')                        |   2 |
+| ('com.google.protobuf', 'protobuf-java')                       |   1 |
+| ('com.itextpdf', 'itextpdf')                                   |   1 |
+| ('com.squareup.okhttp', 'okhttp')                              |   2 |
+| ('commons-beanutils', 'commons-beanutils')                     |   6 |
+| ('commons-collections', 'commons-collections')                 |  11 |
+| ('commons-fileupload', 'commons-fileupload')                   |  10 |
+| ('commons-httpclient', 'commons-httpclient')                   |   1 |
+| ('dom4j', 'dom4j')                                             |   1 |
+| ('io.netty', 'netty-all')                                      |  12 |
+| ('io.undertow', 'undertow-core')                               |   9 |
+| ('jasperreports', 'jasperreports')                             |   4 |
+| ('javax.el', 'el-api')                                         |   1 |
+| ('javax.el', 'javax.el-api')                                   |   2 |
+| ('javax.faces', 'javax.faces-api')                             |   2 |
+| ('javax.servlet.jsp', 'jsp-api')                               |   1 |
+| ('net.sf.jasperreports', 'jasperreports')                      |  14 |
+| ('ognl', 'ognl')                                               |   1 |
+| ('org.apache.axis', 'axis-saaj')                               |   3 |
+| ('org.apache.commons', 'commons-compress')                     |   1 |
+| ('org.apache.httpcomponents', 'httpasyncclient')               |   1 |
+| ('org.apache.httpcomponents', 'httpclient')                    |  32 |
+| ('org.apache.lucene', 'lucene-queryparser')                    |   1 |
+| ('org.apache.poi', 'poi')                                      |  37 |
+| ('org.apache.poi', 'poi-ooxml')                                |   3 |
+| ('org.apache.tomcat.embed', 'tomcat-embed-core')               |  29 |
+| ('org.beanshell', 'bsh')                                       |   2 |
+| ('org.bouncycastle', 'bcprov-jdk14')                           |   5 |
+| ('org.bouncycastle', 'bcprov-jdk15on')                         |   3 |
+| ('org.codehaus.castor', 'castor')                              |   1 |
+| ('org.codehaus.groovy', 'groovy')                              |   2 |
+| ('org.codehaus.groovy', 'groovy-all')                          |  17 |
+| ('org.codehaus.groovy', 'groovy-xml')                          |   1 |
+| ('org.eclipse.jetty', 'jetty-http')                            |  97 |
+| ('org.eclipse.jetty', 'jetty-security')                        |  15 |
+| ('org.eclipse.jetty', 'jetty-server')                          |  71 |
+| ('org.eclipse.jetty', 'jetty-servlet')                         |  19 |
+| ('org.eclipse.jetty', 'jetty-util')                            |  38 |
+| ('org.hibernate', 'com.springsource.org.hibernate.validator')  |   2 |
+| ('org.hibernate', 'hibernate-validator')                       |   7 |
+| ('org.jruby', 'jruby')                                         |   9 |
+| ('org.jruby', 'jruby-core')                                    |  11 |
+| ('org.jruby', 'openssl')                                       |  94 |
+| ('org.jruby', 'readline')                                      |   3 |
+| ('org.jruby', 'ripper')                                        |  11 |
+| ('org.jruby', 'yecht')                                         |   6 |
+| ('org.jruby.ext.posix', 'jnr-posix')                           |   3 |
+| ('org.jruby.extras', 'bytelist')                               |  12 |
+| ('org.jruby.extras', 'jffi')                                   |   3 |
+| ('org.jruby.util', 'bytelist')                                 |   3 |
+| ('org.jsoup', 'jsoup')                                         |   1 |
+| ('org.slf4j', 'slf4j-api')                                     |   1 |
+| ('org.springframework', 'spring-asm')                          |  62 |
+| ('org.springframework', 'spring-core')                         | 413 |
+| ('org.springframework', 'spring-expression')                   |  92 |
+| ('org.springframework', 'spring-jcl')                          |  36 |
+| ('org.springframework', 'spring-oxm')                          |  27 |
+| ('org.springframework', 'spring-tx')                           |   1 |
+| ('org.springframework', 'spring-web')                          | 104 |
+| ('org.springframework', 'spring-webmvc')                       |  33 |
+| ('p2.eclipse-plugin', 'org.apache.axis')                       |   1 |
+| ('rubygems', 'jruby-openssl')                                  | 438 |
+| ('stax', 'stax')                                               |   1 |
+| ('taglibs', 'standard')                                        |   1 |
+
+
+
+### Test Generator
 The generator creates, based on the test fixtures, Maven/Java projects that can be used as an input for open-source vulnerability scanner.
 Each test fixtures specifies in the element `vulnerable` if the warnings is a true or false positive.
 
