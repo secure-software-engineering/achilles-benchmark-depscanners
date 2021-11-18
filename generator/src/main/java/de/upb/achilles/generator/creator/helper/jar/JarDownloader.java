@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 public class JarDownloader {
   // URL where to download the JAR files from
   public static final String HTTP_CENTRAL_MAVEN_ORG_MAVEN_DOWNLOAD_URL =
-      "http://central.maven.org/maven2/%s/%s/%s/%s";
+      "https://repo.maven.apache.org/maven2/%s/%s/%s/%s";
   // in milliseconds for downloading from MAVEN Central
   private static final int CONNECT_TIMEOUT = 15000;
   private static final int READ_TIMEOUT = 15000;
