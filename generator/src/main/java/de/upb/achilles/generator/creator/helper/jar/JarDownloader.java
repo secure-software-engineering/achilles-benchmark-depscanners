@@ -3,14 +3,13 @@ package de.upb.achilles.generator.creator.helper.jar;
 import de.upb.achilles.generator.creator.Util;
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.commons.io.FileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JarDownloader {
   // URL where to download the JAR files from

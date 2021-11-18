@@ -1,21 +1,18 @@
 package de.upb.achilles.generator.creator.chain;
 
-import de.upb.achilles.generator.model.GAV;
+import static org.junit.Assert.*;
+
 import de.upb.achilles.generator.model.GAVModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.util.RandomGavCreator;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static org.junit.Assert.*;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.junit.Test;
 
 public class MetaDataModifierHandlerTest {
 
@@ -39,8 +36,6 @@ public class MetaDataModifierHandlerTest {
     MetaDataModifierHandler downloadHandler = new MetaDataModifierHandler();
     assertFalse(downloadHandler.canHandle(model));
   }
-
-
 
   @Test
   public void handleModify() throws IOException {
@@ -87,6 +82,4 @@ public class MetaDataModifierHandlerTest {
 
     assertNotEquals(orgFilemd5, modFilemd5);
   }
-
-
 }

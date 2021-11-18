@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,7 +20,7 @@ public class TruthCreator {
   private final GAV projectGAV;
   public static final String TRUTH_JSON_FILE_NAME = "truth.json";
 
-    public TruthCreator(GAV projectGAV, Iterable<TestFixtureModel> models, Path projectPath) {
+  public TruthCreator(GAV projectGAV, Iterable<TestFixtureModel> models, Path projectPath) {
     this.projectGAV = projectGAV;
     this.models = models;
 

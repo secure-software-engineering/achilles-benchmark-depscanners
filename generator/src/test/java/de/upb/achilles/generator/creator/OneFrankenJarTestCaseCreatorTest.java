@@ -1,6 +1,6 @@
 package de.upb.achilles.generator.creator;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.nio.file.FileSystem;
@@ -11,8 +11,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 /** @author Andreas Dann created on 20.03.19 */
 public class OneFrankenJarTestCaseCreatorTest {
@@ -35,7 +34,8 @@ public class OneFrankenJarTestCaseCreatorTest {
                 Collections.emptyList(),
                 tempDirWithPrefix.toAbsolutePath().toString(),
                 false,
-                false, false)
+                false,
+                false)
             .mergeJARFilesIntoFrankenJAR(files);
     System.out.println(frankenJar.toAbsolutePath());
 

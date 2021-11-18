@@ -1,10 +1,10 @@
 package de.upb.achilles.generator.creator.chain;
 
+import static org.junit.Assert.*;
+
 import de.upb.achilles.generator.model.GAVModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class GAVModifierHandlerTest {
 

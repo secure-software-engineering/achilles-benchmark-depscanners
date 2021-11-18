@@ -38,27 +38,28 @@ public class CheckBoxTreeTableCellFactory<S, T>
     //                //              else if (newValue.getClass() == TestFixtureModel.class) {
     //                //                cell.setEditable(false);
     //                //
-    //                //              } else if (newValue.getClass() == TestFixtureModelParent.class)
+    //                //              } else if (newValue.getClass() ==
+    // TestFixtureModelParent.class)
     // {
     //                //                cell.setEditable(true);
     //                //              }
     //              });
     //    }
 
-//    cell.itemProperty()
-//        .addListener(
-//            (obs, oldValue, newValue) -> {
-//              TreeTableRow row = cell.getTreeTableRow();
-//
-//              if (row == null) {
-//              } else {
-//                TreeItem item = cell.getTreeTableRow().getTreeItem();
-//                if (item == null) {;
-//                } else if (item.getValue().getClass() == TestFixtureModel.class) {
-//                  row.setDisable(true);
-//                }
-//              }
-//            });
+    //    cell.itemProperty()
+    //        .addListener(
+    //            (obs, oldValue, newValue) -> {
+    //              TreeTableRow row = cell.getTreeTableRow();
+    //
+    //              if (row == null) {
+    //              } else {
+    //                TreeItem item = cell.getTreeTableRow().getTreeItem();
+    //                if (item == null) {;
+    //                } else if (item.getValue().getClass() == TestFixtureModel.class) {
+    //                  row.setDisable(true);
+    //                }
+    //              }
+    //            });
     return cell;
   }
 }

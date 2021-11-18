@@ -3,9 +3,6 @@ package de.upb.achilles.generator.model;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -14,6 +11,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** @author Andreas Dann created on 05.01.19 */
 public class Initializer {
@@ -81,10 +80,9 @@ public class Initializer {
 
     dummyList.add(new TestFixtureModel(testFixture));
 
-
     TestFixture testFixtureA1 =
-            new TestFixture(
-                    "a1", "n", new GAV("g", "a", "1"), false, new TestFixtureDetail[] {testFixtureDetail});
+        new TestFixture(
+            "a1", "n", new GAV("g", "a", "1"), false, new TestFixtureDetail[] {testFixtureDetail});
 
     dummyList.add(new TestFixtureModel(testFixtureA1));
 

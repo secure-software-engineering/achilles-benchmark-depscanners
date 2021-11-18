@@ -3,14 +3,6 @@ package de.upb.achilles.generator.creator.chain;
 import de.upb.achilles.generator.creator.Util;
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.maven.shared.invoker.DefaultInvocationRequest;
-import org.apache.maven.shared.invoker.DefaultInvoker;
-import org.apache.maven.shared.invoker.InvocationRequest;
-import org.apache.maven.shared.invoker.InvocationResult;
-import org.apache.maven.shared.invoker.Invoker;
-import org.apache.maven.shared.invoker.MavenInvocationException;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,6 +11,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import org.apache.maven.shared.invoker.DefaultInvocationRequest;
+import org.apache.maven.shared.invoker.DefaultInvoker;
+import org.apache.maven.shared.invoker.InvocationRequest;
+import org.apache.maven.shared.invoker.InvocationResult;
+import org.apache.maven.shared.invoker.Invoker;
+import org.apache.maven.shared.invoker.MavenInvocationException;
+import org.slf4j.LoggerFactory;
 
 public class RecompileHandler extends OneTimeHandler {
 
@@ -35,7 +34,6 @@ public class RecompileHandler extends OneTimeHandler {
   protected void handle(TestFixtureModel requTestFixtureModel) throws JarModificationException {
 
     try {
-
 
       Path sourceJarFile = requTestFixtureModel.getJarFile();
 
@@ -107,5 +105,4 @@ public class RecompileHandler extends OneTimeHandler {
           "Failed to recompile " + requTestFixtureModel.getOrgGav(), e, requTestFixtureModel);
     }
   }
-
 }

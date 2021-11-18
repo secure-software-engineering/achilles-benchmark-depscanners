@@ -1,17 +1,16 @@
 package de.upb.achilles.generator.creator.chain;
 
+import static org.junit.Assert.*;
+
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.commons.codec.digest.DigestUtils;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static org.junit.Assert.*;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.junit.Test;
 
 public class RecompileHandlerTest {
 

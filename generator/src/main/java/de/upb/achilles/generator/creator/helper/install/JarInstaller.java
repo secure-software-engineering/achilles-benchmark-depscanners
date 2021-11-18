@@ -2,7 +2,6 @@ package de.upb.achilles.generator.creator.helper.install;
 
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

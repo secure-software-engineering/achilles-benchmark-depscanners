@@ -1,14 +1,13 @@
 package de.upb.achilles.generator.creator.testfixutures;
 
+import static java.util.stream.Collectors.groupingBy;
+
 import de.upb.achilles.generator.model.Initializer;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.junit.Test;
-
 import java.util.List;
 import java.util.Map;
-
-import static java.util.stream.Collectors.groupingBy;
+import org.junit.Test;
 
 public class FixtureSanityCheck {
 
@@ -45,8 +44,7 @@ public class FixtureSanityCheck {
         }
       }
     }
-    System.out.println("Total: "+counter);
-
+    System.out.println("Total: " + counter);
   }
 
   public static String testFixtureToString(TestFixtureModel testFixtureModel) {

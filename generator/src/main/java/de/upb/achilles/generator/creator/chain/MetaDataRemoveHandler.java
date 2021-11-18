@@ -1,9 +1,6 @@
 package de.upb.achilles.generator.creator.chain;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
@@ -12,6 +9,8 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.Comparator;
 import java.util.Objects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MetaDataRemoveHandler extends OneTimeHandler {
 
@@ -64,7 +63,8 @@ public class MetaDataRemoveHandler extends OneTimeHandler {
    */
   private void removeMetaData(TestFixtureModel testFixtureModel) throws JarModificationException {
     Path jarFile = testFixtureModel.getJarFile();
-    try (FileSystem zipfs = FileSystems.newFileSystem(Objects.requireNonNull(jarFile), null)) {
+    try (FileSystem zipfs =
+        FileSystems.newFileSystem(Objects.requireNonNull(jarFile), (java.lang.ClassLoader) null)) {
       Path metaInfFolder = zipfs.getPath("/", "META-INF");
       boolean folderExistss = Files.exists(metaInfFolder);
       if (!folderExistss) {
@@ -103,7 +103,8 @@ public class MetaDataRemoveHandler extends OneTimeHandler {
   private void createEmptyZipEntry(TestFixtureModel testFixtureModel) {
 
     Path jarFile = testFixtureModel.getJarFile();
-    try (FileSystem zipfs = FileSystems.newFileSystem(Objects.requireNonNull(jarFile), null)) {
+    try (FileSystem zipfs =
+        FileSystems.newFileSystem(Objects.requireNonNull(jarFile), (java.lang.ClassLoader) null)) {
       Path newEmtpyFiles = Files.createFile(zipfs.getPath("/", ".emptyFile"));
     } catch (IOException e) {
       e.printStackTrace();

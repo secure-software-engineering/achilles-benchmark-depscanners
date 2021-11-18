@@ -10,6 +10,9 @@ import de.upb.achilles.generator.model.SessionModel;
 import de.upb.achilles.generator.model.SessionState;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
+import java.io.File;
+import java.io.IOException;
+import java.util.Optional;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -26,10 +29,6 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.textfield.CustomTextField;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Optional;
 
 /** @author Andreas Dann created on 05.01.19 */
 public class MainController {

@@ -1,6 +1,13 @@
 package de.upb.achilles.generator.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import javafx.beans.Observable;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ReadOnlyBooleanProperty;
@@ -9,19 +16,11 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.util.Callback;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.swing.event.EventListenerList;
-import java.nio.file.Path;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** @author Andreas Dann created on 05.01.19 */
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -112,8 +111,6 @@ public class TestFixtureModel {
             .filter(TestFixtureDetailModel::isContained)
             .collect(Collectors.toList());
   }
-
-
 
   public boolean isContainsCode() {
     return containsCode.get();

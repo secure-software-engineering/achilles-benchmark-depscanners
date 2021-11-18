@@ -2,10 +2,9 @@ package de.upb.achilles.generator.creator.chain;
 
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
-import javax.annotation.Nonnull;
 import java.nio.file.Path;
 import java.util.HashMap;
+import javax.annotation.Nonnull;
 
 /** Is executed only once per GAV */
 public abstract class OneTimeHandler extends Handler {

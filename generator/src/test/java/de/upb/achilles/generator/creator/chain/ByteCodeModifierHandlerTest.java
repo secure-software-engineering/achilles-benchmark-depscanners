@@ -1,13 +1,13 @@
 package de.upb.achilles.generator.creator.chain;
 
-import org.junit.Test;
-
 import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 public class ByteCodeModifierHandlerTest {
 
   @Test
   public void modifyJar() {
-    //TODO implement test
+    // TODO implement test
   }
 }

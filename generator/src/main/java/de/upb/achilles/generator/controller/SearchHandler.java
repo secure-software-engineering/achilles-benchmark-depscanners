@@ -9,6 +9,7 @@ import de.upb.achilles.generator.model.SessionModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.searcher.SearchFieldClassTool;
 import de.upb.achilles.generator.searcher.SearchTool;
+import java.util.function.Predicate;
 import javafx.beans.property.ObjectProperty;
 import javafx.collections.ListChangeListener;
 import javafx.scene.control.Button;
@@ -18,8 +19,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import org.apache.commons.lang3.StringUtils;
 import org.controlsfx.control.textfield.CustomTextField;
-
-import java.util.function.Predicate;
 
 public class SearchHandler {
 

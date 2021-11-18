@@ -1,8 +1,6 @@
 package de.upb.achilles.generator.creator.helper.install;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
+import org.apache.commons.lang3.StringUtils;
 
 public abstract class AbstractInstallScriptCreator {
 
@@ -29,7 +28,8 @@ public abstract class AbstractInstallScriptCreator {
 
     for (TestFixtureModel entry : testFixtureModels) {
       String[] cmd =
-          JarInstaller.mvnInstallCommand(entry.getGAV4Pom(), Objects.requireNonNull(entry.getJarFile()), projectPath);
+          JarInstaller.mvnInstallCommand(
+              entry.getGAV4Pom(), Objects.requireNonNull(entry.getJarFile()), projectPath);
       String joinedCmd = StringUtils.join(cmd, " ");
       commands.add(joinedCmd);
     }
