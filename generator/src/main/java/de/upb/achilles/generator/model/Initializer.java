@@ -3,6 +3,9 @@ package de.upb.achilles.generator.model;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -11,8 +14,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /** @author Andreas Dann created on 05.01.19 */
 public class Initializer {
@@ -46,12 +47,12 @@ public class Initializer {
 
     ObjectMapper mapper = new ObjectMapper();
 
-    try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(directory))) {
+    try (DirectoryStream<Path> directoryStream =
+        Files.newDirectoryStream(Paths.get(directory), "*.json")) {
       for (Path path : directoryStream) {
         // JSON from file to Object
 
         try {
-
           TestFixture testFixture = mapper.readValue(Files.newInputStream(path), TestFixture.class);
           testFixtureArrayList.add(testFixture);
         } catch (JsonParseException | JsonMappingException ex) {
