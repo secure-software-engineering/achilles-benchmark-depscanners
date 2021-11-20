@@ -22,8 +22,10 @@ public class CheckBoxTreeTableCellFactory<S, T>
 
     CheckBoxTreeTableCell<S, T> cell = new CheckBoxTreeTableCell<>();
     cell.setAlignment(Pos.CENTER);
-    cell.editableProperty()
-        .bind(Bindings.selectBoolean(cell.tableRowProperty(), "item", "editable"));
+    if (cell.tableRowProperty() != null && cell.tableRowProperty().getValue() != null) {
+      cell.editableProperty()
+          .bind(Bindings.selectBoolean(cell.tableRowProperty(), "item", "editable"));
+    }
     cell.pseudoClassStateChanged(MY_PSEUDO_CLASS_STATE, cell.isEditable());
 
     //    TreeTableRow<S> treeTableRow = cell.getTreeTableRow();

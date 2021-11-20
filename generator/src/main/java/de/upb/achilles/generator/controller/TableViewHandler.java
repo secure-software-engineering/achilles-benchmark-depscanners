@@ -5,12 +5,13 @@ import de.upb.achilles.generator.model.SessionModel;
 import de.upb.achilles.generator.model.TestFixture;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.model.TestFixtureModelParent;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableView;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /** @author Andreas Dann created on 05.01.19 */
 public class TableViewHandler {

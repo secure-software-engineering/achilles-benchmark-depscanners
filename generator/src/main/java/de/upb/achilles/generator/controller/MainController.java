@@ -10,9 +10,6 @@ import de.upb.achilles.generator.model.SessionModel;
 import de.upb.achilles.generator.model.SessionState;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import java.io.File;
-import java.io.IOException;
-import java.util.Optional;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -29,6 +26,10 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.textfield.CustomTextField;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Optional;
 
 /** @author Andreas Dann created on 05.01.19 */
 public class MainController {
@@ -297,22 +298,20 @@ public class MainController {
                   sessionModel.isInstallJARs(),
                   sessionModel.getRemoveMetaData());
         }
-        buttonSave.setDisable(true);
+        // FIXME: ugly UI stuff
+        buttonSave.disableProperty().bind(testCaseCreator.workDoneProperty().isNotEqualTo(10));
 
         progressBar.setProgress(0);
         progressBar.progressProperty().bind(testCaseCreator.progressProperty());
 
         new Thread(testCaseCreator).start();
 
-        // FIXME: ugly UI stuff
-        buttonSave.disableProperty().bind(testCaseCreator.workDoneProperty().isNotEqualTo(10));
-
       } catch (Exception e) {
         e.printStackTrace();
 
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error Dialog");
-        alert.setHeaderText("Look, an Error Dialog");
+        alert.setHeaderText("The creation crashed with:");
         alert.setContentText(e.getLocalizedMessage());
         alert.showAndWait();
       }
