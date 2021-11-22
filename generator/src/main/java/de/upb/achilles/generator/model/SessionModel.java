@@ -4,19 +4,18 @@ package de.upb.achilles.generator.model;
  * Open Source Software published under the Apache Licence, Version 2.0.
  */
 
+import static java.util.Collections.unmodifiableList;
+import static java.util.stream.Collectors.groupingBy;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.TreeItem;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import static java.util.Collections.unmodifiableList;
-import static java.util.stream.Collectors.groupingBy;
 
 public final class SessionModel {
 

@@ -1,12 +1,11 @@
 package de.upb.achilles.generator.creator.chain;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-
-import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
+import javax.annotation.Nonnull;
 
 public class JarModificationException extends IOException {
 

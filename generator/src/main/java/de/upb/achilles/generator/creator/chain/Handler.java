@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.creator.chain;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import javax.annotation.Nonnull;
 
 public abstract class Handler {

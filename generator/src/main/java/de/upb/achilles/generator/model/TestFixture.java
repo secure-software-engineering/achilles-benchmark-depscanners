@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.annotation.Nonnull;
 
 /** @author Andreas Dann created on 05.01.19 */

@@ -21,11 +21,6 @@ import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.GAVModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.util.RandomGavCreator;
-import javafx.concurrent.Task;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.annotation.Nullable;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -37,6 +32,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
+import javafx.concurrent.Task;
+import javax.annotation.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Creates the test cases as input for vulnerability scanner
@@ -168,7 +167,7 @@ public abstract class TestCaseCreatorChain extends Task {
   protected void finalizeJarModification() {}
 
   private final void createTestCase() throws IOException, InterruptedException {
-    this.updateProgress(0,10);
+    this.updateProgress(0, 10);
     GAV randomGave = RandomGavCreator.getRandomGave();
 
     randomGave.setGroupId(this.prependProjectGAV() + "." + randomGave.getGroupId());
@@ -177,28 +176,25 @@ public abstract class TestCaseCreatorChain extends Task {
 
     this.prepareTestCases();
 
-    this.updateProgress(1,10);
-
+    this.updateProgress(1, 10);
 
     this.modifyJarFiles();
 
-    this.updateProgress(2,10);
-
+    this.updateProgress(2, 10);
 
     this.createGroundTruth();
-    this.updateProgress(3,10);
+    this.updateProgress(3, 10);
 
     this.createProjectPom();
 
-    this.updateProgress(4,10);
+    this.updateProgress(4, 10);
 
     Collection<TestFixtureModel> testFixturesToInstall = this.getTestFixturesToInstall();
 
     if (installJARs) {
       for (TestFixtureModel entry : testFixturesToInstall) {
         JarInstaller.installJarIntoLocalRepo(entry, entry.getJarFile(), null);
-        this.updateProgress(8,10);
-
+        this.updateProgress(8, 10);
       }
     } else {
       List<Path> collect =
@@ -206,16 +202,14 @@ public abstract class TestCaseCreatorChain extends Task {
               .map(TestFixtureModel::getJarFile)
               .collect(Collectors.toList());
       this.copyJarFilesIntoProject(collect);
-      this.updateProgress(8,10);
+      this.updateProgress(8, 10);
 
       this.createInstallationScripts(testFixturesToInstall);
-      this.updateProgress(9,10);
+      this.updateProgress(9, 10);
     }
-    this.updateProgress(10,10);
+    this.updateProgress(10, 10);
 
     LOGGER.info("Test Case Creation Done!!!");
-
-
   }
 
   protected abstract Collection<TestFixtureModel> getTestFixturesToInstall();

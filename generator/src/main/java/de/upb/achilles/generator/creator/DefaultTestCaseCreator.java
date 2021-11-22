@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.creator;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -13,7 +12,8 @@ public class DefaultTestCaseCreator extends TestCaseCreatorChain {
   public DefaultTestCaseCreator(
       Collection<TestFixtureModel> selectedWordModels,
       String outputFolder,
-      boolean installJARs, boolean removeMetaData) {
+      boolean installJARs,
+      boolean removeMetaData) {
     super(installJARs, outputFolder, removeMetaData);
     this.selectedWordModels = new ArrayList<>(selectedWordModels);
     // the project gav

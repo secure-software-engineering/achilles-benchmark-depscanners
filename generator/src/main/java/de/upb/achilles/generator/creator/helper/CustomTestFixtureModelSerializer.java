@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.io.IOException;
 
 /** @author Andreas Dann created on 13.01.19 */

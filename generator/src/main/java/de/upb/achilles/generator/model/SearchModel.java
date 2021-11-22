@@ -6,6 +6,8 @@ package de.upb.achilles.generator.model;
 
 import de.upb.achilles.generator.searcher.SearchResult;
 import de.upb.achilles.generator.searcher.Searcher;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -13,9 +15,6 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.ObservableList;
-
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 public class SearchModel<T extends TestFixtureModel> {
   private final Searcher<T> searcher;

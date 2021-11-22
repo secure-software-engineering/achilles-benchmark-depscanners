@@ -3,7 +3,6 @@ package de.upb.achilles.generator.creator.chain;
 import de.upb.achilles.generator.creator.Util;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.io.IOException;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
@@ -15,7 +14,8 @@ public class JarRemoveFilesTrimmer extends JarTrimmerHandler {
   @Override
   protected void modifyJar(TestFixtureModel requTestFixtureModel) {
     Path jarFile = requTestFixtureModel.getJarFile();
-    try (FileSystem zipfs = FileSystems.newFileSystem(Objects.requireNonNull(jarFile), null)) {
+    try (FileSystem zipfs =
+        FileSystems.newFileSystem(Objects.requireNonNull(jarFile), (java.lang.ClassLoader) null)) {
       for (TestFixtureDetailModel detailModel : requTestFixtureModel.getTestFixtureDetailModel()) {
         if (!detailModel.isInclude()) {
           String fileName = Util.getFileName(detailModel.getQname());

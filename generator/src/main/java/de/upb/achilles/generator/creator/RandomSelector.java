@@ -6,15 +6,14 @@ import de.upb.achilles.generator.model.GAVModification;
 import de.upb.achilles.generator.model.SessionModel;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
+import java.util.Random;
+import java.util.Set;
+import java.util.stream.Collectors;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Random;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /** @author Andreas Dann created on 13.01.19 */
 public class RandomSelector {

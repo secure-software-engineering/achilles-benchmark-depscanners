@@ -3,11 +3,10 @@ package de.upb.achilles.generator.creator.chain;
 import de.upb.achilles.generator.creator.helper.jar.JarDownloader;
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.nio.file.Path;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** Download the jar and its source from MavenCentral */
 public class DownloadHandler extends OneTimeHandler {

@@ -1,14 +1,13 @@
 package de.upb.achilles.generator.creator.chain;
 
+import static org.junit.Assert.assertTrue;
+
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 public class DownloadHandlerTest {
 
@@ -36,7 +35,6 @@ public class DownloadHandlerTest {
     assertTrue(regularFile);
   }
 
-
   @Test
   public void handleSrc() throws IOException {
 
@@ -54,6 +52,5 @@ public class DownloadHandlerTest {
     assertTrue(regularFile);
 
     assertTrue(downloadedJar.getFileName().toString().endsWith("-sources.jar"));
-
   }
 }

@@ -1,19 +1,17 @@
 package de.upb.achilles.generator.creator.chain;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.commons.lang3.StringUtils;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 public class RepackageHandlerTest {
 
@@ -58,13 +56,12 @@ public class RepackageHandlerTest {
         System.out.println(p.toAbsolutePath());
         if (Files.isDirectory(p)) {
           // if the packages are correctly repackged then the org packages is changed
-          String fileName = p.getFileName().toString().replace("/","");
+          String fileName = p.getFileName().toString().replace("/", "");
           assertFalse(fileName.startsWith("org"));
         }
       }
     }
 
     System.out.println(testFixtureModel.getGAV4Pom().getGroupId());
-
   }
 }

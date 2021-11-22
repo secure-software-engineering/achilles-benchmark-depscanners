@@ -1,22 +1,6 @@
 package de.upb.achilles.generator.creator.chain;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.file.FileSystem;
@@ -26,6 +10,21 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.util.Objects;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 /**
  * Should be last in the Chain ....
@@ -78,7 +77,8 @@ public class MetaDataModifierHandler extends OneTimeHandler {
     // modify the metadata
 
     Path jarFile = testFixtureModel.getJarFile();
-    try (FileSystem zipfs = FileSystems.newFileSystem(Objects.requireNonNull(jarFile), null)) {
+    try (FileSystem zipfs =
+        FileSystems.newFileSystem(Objects.requireNonNull(jarFile), (java.lang.ClassLoader) null)) {
       Path metaInfFolder = zipfs.getPath("/", "META-INF", "maven");
       boolean folderExistss = Files.exists(metaInfFolder);
       if (!folderExistss) {

@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.util;
 
 import de.upb.achilles.generator.model.GAV;
-
 import java.util.Random;
 
 /** from https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go */

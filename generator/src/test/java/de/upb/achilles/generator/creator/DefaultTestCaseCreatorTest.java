@@ -1,28 +1,23 @@
 package de.upb.achilles.generator.creator;
 
+import static org.junit.Assert.assertTrue;
+
 import de.upb.achilles.generator.creator.chain.HandlerTestUtils;
 import de.upb.achilles.generator.creator.helper.TruthCreator;
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.GAVModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.junit.Rule;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.assertTrue;
-
-
-
+import org.junit.Rule;
+import org.junit.Test;
 
 public class DefaultTestCaseCreatorTest {
 
   @Rule public JavaFXThreadingRule javafxRule = new JavaFXThreadingRule();
-
 
   /** Test to check the complete chain */
   @Test
@@ -48,11 +43,9 @@ public class DefaultTestCaseCreatorTest {
         new DefaultTestCaseCreator(
             testFixtureModelList, tempDirectory.toAbsolutePath().toString(), false, false);
 
-
     Thread thread = new Thread(testCaseCreator);
     thread.start();
     thread.join();
-
 
     // pom exists
     Path pomFile = tempDirectory.resolve("pom.xml");

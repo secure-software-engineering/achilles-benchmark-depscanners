@@ -4,7 +4,6 @@ import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.GAVModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.util.RandomGavCreator;
-
 import java.util.HashMap;
 import java.util.Random;
 
