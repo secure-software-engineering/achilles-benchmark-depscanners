@@ -8,7 +8,6 @@ import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -57,7 +56,7 @@ public class RepackageHandler extends Handler {
   private static void addClassRenameRules(
       Path jarFile, DefaultJarProcessor processors, final String prependPackage) {
     ArrayList<String> patternNames = new ArrayList<>();
-    try (FileSystem zipFileSys = FileSystems.newFileSystem(jarFile, null)) {
+    try (FileSystem zipFileSys = FileSystems.newFileSystem(jarFile, (java.lang.ClassLoader) null)) {
       final Path archiveRoot = zipFileSys.getPath("/");
       DirectoryStream<Path> paths = Files.newDirectoryStream(archiveRoot);
       for (Path p : paths) {

@@ -30,8 +30,10 @@ public class ComboBoxTreeTableCellFactory<S, T>
     ComboBoxTreeTableCell cell;
     if (nodes != null) {
       cell = new ComboBoxTreeTableCell<>(nodes);
-      cell.editableProperty()
-          .bind(Bindings.selectBoolean(cell.tableRowProperty(), "item", "editable"));
+      if (cell.tableRowProperty() != null && cell.tableRowProperty().getValue() != null) {
+        cell.editableProperty()
+            .bind(Bindings.selectBoolean(cell.tableRowProperty(), "item", "editable"));
+      }
 
     } else {
 

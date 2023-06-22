@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 

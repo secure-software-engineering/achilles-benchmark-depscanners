@@ -3,10 +3,6 @@ package de.upb.achilles.generator.creator.chain;
 import de.upb.achilles.generator.creator.Util;
 import de.upb.achilles.generator.model.ByteCodeModification;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassWriter;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -16,6 +12,9 @@ import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Objects;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassWriter;
+import org.slf4j.LoggerFactory;
 
 /** Simulate re-compiling the jar by re-writing all class files with ASM */
 public class ASMByteCodeRecompileHandler extends OneTimeHandler {

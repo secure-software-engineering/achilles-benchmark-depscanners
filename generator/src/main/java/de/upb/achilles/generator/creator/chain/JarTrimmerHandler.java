@@ -24,5 +24,6 @@ public abstract class JarTrimmerHandler extends Handler {
     requTestFixtureModel.updateIncludesAfterDelete();
   }
 
-  protected abstract void modifyJar(TestFixtureModel requTestFixtureModel) throws JarModificationException;
+  protected abstract void modifyJar(TestFixtureModel requTestFixtureModel)
+      throws JarModificationException;
 }

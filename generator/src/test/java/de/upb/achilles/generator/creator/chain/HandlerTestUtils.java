@@ -4,7 +4,6 @@ import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.TestFixture;
 import de.upb.achilles.generator.model.TestFixtureDetail;
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -32,12 +31,11 @@ public class HandlerTestUtils {
 
   public static TestFixtureModel getEmptyTestFixtureModel(GAV gav) {
 
-
     TestFixtureDetail testFixtureDetail =
-            new TestFixtureDetail(
-                    "/org/apache/commons/lang3/AnnotationUtils.class",
-                    "org.apache.commons.lang3.AnnotationUtils",
-                    true);
+        new TestFixtureDetail(
+            "/org/apache/commons/lang3/AnnotationUtils.class",
+            "org.apache.commons.lang3.AnnotationUtils",
+            true);
     TestFixtureDetail models[] = new TestFixtureDetail[] {testFixtureDetail};
 
     TestFixture testFixture = new TestFixture("dummyCVE", "dummyCVE", gav, true, models);

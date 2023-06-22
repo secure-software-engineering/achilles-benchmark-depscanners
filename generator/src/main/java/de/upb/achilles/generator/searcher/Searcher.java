@@ -4,16 +4,15 @@ package de.upb.achilles.generator.searcher;
  * Open Source Software published under the Apache Licence, Version 2.0.
  */
 
-import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.commons.lang3.StringUtils;
+import static java.util.stream.Collectors.toList;
 
+import de.upb.achilles.generator.model.TestFixtureModel;
 import java.text.MessageFormat;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
-
-import static java.util.stream.Collectors.toList;
+import org.apache.commons.lang3.StringUtils;
 
 public class Searcher<T extends TestFixtureModel> {
   private final Function<String, Predicate<TestFixtureModel>> matchMaker;
@@ -28,8 +27,12 @@ public class Searcher<T extends TestFixtureModel> {
       return new SearchResult<>();
     } else {
       Predicate<TestFixtureModel> matcher = matchMaker.apply(searchText);
-      //TODO: sort results here
-      List<T> matches = wordList.stream().sorted(Comparator.comparing(p -> p.getOrgGav().toString())).filter(matcher).collect(toList());
+      // TODO: sort results here
+      List<T> matches =
+          wordList.stream()
+              .sorted(Comparator.comparing(p -> p.getOrgGav().toString()))
+              .filter(matcher)
+              .collect(toList());
 
       if (matches.isEmpty()) {
         return new SearchResult<>("No matches", null, null, null, true);

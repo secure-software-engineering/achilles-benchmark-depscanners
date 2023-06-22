@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.creator;
 
 import de.upb.achilles.generator.model.GAV;
-
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;

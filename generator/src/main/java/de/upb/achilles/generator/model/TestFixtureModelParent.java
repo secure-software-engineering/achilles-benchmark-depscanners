@@ -9,7 +9,7 @@ public class TestFixtureModelParent extends TestFixtureModel {
 
   public TestFixtureModelParent(TestFixture testFixture) {
     super(testFixture);
-    this.editableProperty().setValue(true);
+   // this.editableProperty().setValue(true);
   }
 
   public boolean isChildContainsCode() {

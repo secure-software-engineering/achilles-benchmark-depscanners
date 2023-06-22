@@ -4,7 +4,7 @@ public enum ByteCodeModification {
   ORG("O", "Original"),
   REPACKAGE("RP", "Repackage"),
   // re-writes the class files using ASM framework, and thus modifies the class file digest
-  RECOMPILE("RC","Recompile"),
+  RECOMPILE("RC", "Recompile"),
   // forces the jar to be recompiled from source
   FORCE_RECOMPILE("FRC", "Force Recompile");
 

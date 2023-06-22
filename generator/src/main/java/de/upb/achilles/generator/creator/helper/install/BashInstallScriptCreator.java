@@ -1,7 +1,6 @@
 package de.upb.achilles.generator.creator.helper.install;
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-
 import java.nio.file.Path;
 import java.util.Collection;
 

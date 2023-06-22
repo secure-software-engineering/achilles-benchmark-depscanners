@@ -5,7 +5,6 @@ import de.upb.achilles.generator.model.TestFixture;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.util.RandomGavCreator;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -172,7 +171,7 @@ public class UberJarTestCaseCreator extends TestCaseCreatorChain {
     HashSet<String> copiedFiles = new HashSet<>();
 
     for (Path jarFile : jarFiles) {
-      try (FileSystem fs = FileSystems.newFileSystem(jarFile, null)) {
+      try (FileSystem fs = FileSystems.newFileSystem(jarFile, (java.lang.ClassLoader) null)) {
         final Path archiveRoot = fs.getPath("/");
 
         Files.walk(archiveRoot)

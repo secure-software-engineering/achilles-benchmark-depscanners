@@ -298,22 +298,20 @@ public class MainController {
                   sessionModel.isInstallJARs(),
                   sessionModel.getRemoveMetaData());
         }
-        buttonSave.setDisable(true);
+        // FIXME: ugly UI stuff
+        buttonSave.disableProperty().bind(testCaseCreator.workDoneProperty().isNotEqualTo(10));
 
         progressBar.setProgress(0);
         progressBar.progressProperty().bind(testCaseCreator.progressProperty());
 
         new Thread(testCaseCreator).start();
 
-        // FIXME: ugly UI stuff
-        buttonSave.disableProperty().bind(testCaseCreator.workDoneProperty().isNotEqualTo(10));
-
       } catch (Exception e) {
         e.printStackTrace();
 
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error Dialog");
-        alert.setHeaderText("Look, an Error Dialog");
+        alert.setHeaderText("The creation crashed with:");
         alert.setContentText(e.getLocalizedMessage());
         alert.showAndWait();
       }

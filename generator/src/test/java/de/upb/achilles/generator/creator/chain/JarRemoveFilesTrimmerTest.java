@@ -1,10 +1,10 @@
 package de.upb.achilles.generator.creator.chain;
 
-import de.upb.achilles.generator.model.TestFixtureModel;
-import org.junit.Test;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import de.upb.achilles.generator.model.TestFixtureModel;
+import org.junit.Test;
 
 public class JarRemoveFilesTrimmerTest {
 

@@ -47,12 +47,12 @@ public class Initializer {
 
     ObjectMapper mapper = new ObjectMapper();
 
-    try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(directory))) {
+    try (DirectoryStream<Path> directoryStream =
+        Files.newDirectoryStream(Paths.get(directory), "*.json")) {
       for (Path path : directoryStream) {
         // JSON from file to Object
 
         try {
-
           TestFixture testFixture = mapper.readValue(Files.newInputStream(path), TestFixture.class);
           testFixtureArrayList.add(testFixture);
         } catch (JsonParseException | JsonMappingException ex) {
@@ -81,10 +81,9 @@ public class Initializer {
 
     dummyList.add(new TestFixtureModel(testFixture));
 
-
     TestFixture testFixtureA1 =
-            new TestFixture(
-                    "a1", "n", new GAV("g", "a", "1"), false, new TestFixtureDetail[] {testFixtureDetail});
+        new TestFixture(
+            "a1", "n", new GAV("g", "a", "1"), false, new TestFixtureDetail[] {testFixtureDetail});
 
     dummyList.add(new TestFixtureModel(testFixtureA1));
 

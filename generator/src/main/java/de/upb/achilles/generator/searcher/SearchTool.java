@@ -5,12 +5,11 @@ package de.upb.achilles.generator.searcher;
  */
 
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
+import org.apache.commons.lang3.StringUtils;
 
 public final class SearchTool {
   private SearchTool() {

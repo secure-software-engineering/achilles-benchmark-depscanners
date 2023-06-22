@@ -3,18 +3,17 @@ package de.upb.achilles.generator.creator.chain;
 import de.upb.achilles.generator.creator.Util;
 import de.upb.achilles.generator.model.TestFixtureDetailModel;
 import de.upb.achilles.generator.model.TestFixtureModel;
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassVisitor;
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.MethodVisitor;
-import org.objectweb.asm.Opcodes;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 
 public class ByteCodeModifierHandler extends JarTrimmerHandler {
 
@@ -42,7 +41,7 @@ public class ByteCodeModifierHandler extends JarTrimmerHandler {
   private void modifyFilesInJar(TestFixtureModel testFixtureModel, Path jarFile)
       throws JarModificationException {
 
-    try (FileSystem zipfs = FileSystems.newFileSystem(jarFile, null)) {
+    try (FileSystem zipfs = FileSystems.newFileSystem(jarFile, (java.lang.ClassLoader) null)) {
       for (TestFixtureDetailModel detailModel : testFixtureModel.getTestFixtureDetailModel()) {
 
         if (!detailModel.isInclude()) {

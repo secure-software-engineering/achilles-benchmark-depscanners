@@ -1,15 +1,14 @@
 package de.upb.achilles.generator.creator.helper;
 
+import static org.junit.Assert.*;
+
 import de.upb.achilles.generator.model.GAV;
 import de.upb.achilles.generator.model.Initializer;
 import de.upb.achilles.generator.model.TestFixtureModel;
 import de.upb.achilles.generator.util.RandomGavCreator;
-import org.junit.Test;
-
 import java.nio.file.Paths;
 import java.util.List;
-
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 /** @author Andreas Dann created on 10.01.19 */
 public class PomCreatorTest {

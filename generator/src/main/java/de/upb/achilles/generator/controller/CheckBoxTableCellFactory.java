@@ -22,8 +22,10 @@ public class CheckBoxTableCellFactory<S, T>
     cell.setAlignment(Pos.CENTER);
     // cell.pseudoClassStateChanged(MY_PSEUDO_CLASS_STATE, cell.isEditable());
 
-    cell.editableProperty()
-        .bind(Bindings.selectBoolean(cell.tableRowProperty(), "item", "editable"));
+    if (cell.tableRowProperty() != null && cell.tableRowProperty().getValue() != null) {
+      cell.editableProperty()
+          .bind(Bindings.selectBoolean(cell.tableRowProperty(), "item", "editable"));
+    }
 
     cell.editableProperty()
         .addListener(
