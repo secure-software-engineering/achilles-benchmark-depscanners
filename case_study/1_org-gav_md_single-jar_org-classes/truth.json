@@ -2053,7 +2053,7 @@
         "version": "4.1.3"
       },
       "cve": "CVE-2015-5262",
-      "vulnerable": true,
+      "vulnerable": false,
       "details": [
         {
           "file": "/org/apache/http/conn/ssl/SSLConnectionSocketFactory.class",
