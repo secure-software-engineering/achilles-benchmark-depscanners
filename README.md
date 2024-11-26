@@ -139,6 +139,9 @@ To do so, please fork the project, commit an appropriate test fixture, update th
 Achilles is licensed under the LGPLv3 license, see LICENSE file. This basically means that you are free to use the tool (even in commercial, closed-source projects). However, if you extend or modify the tool, you must make your changes available under the LGPLv3 as well. This ensures that we can continue to improve the tool as a community effort.
 
 
+## Acknowledgement
+This work was partially supported by the German Research Foundation (DFG) within the Collaborative Research Centre ”On-The-Fly Computing“ (GZ: SFB 901/3) under the project number 160364472.
+
 ## Contact
 
 If you experience any issues, you can ask for help on GitHub issue board. You can also contact us at andreas.dann@uni-paderborn.de
